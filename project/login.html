@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/share.css">
+    <link rel="stylesheet" href="font_1215692_ssw1r8f8lpq/iconfont.css">
+    <script src="jquery.js"></script>
+    <title>登入界面</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-main">
+            <div class="login"><img src="images/login.png"></div>
+            
+        </div>
+    </div>
+
+    <div class="banner">
+       <div class="layout">
+           <div class="layout-top">
+                   <div class="layout-top-nav">
+                       <i>账号登入</i>
+                       <i>扫码登入</i>
+                   </div>
+           </div>
+           <div class="layout-center">
+               <div class="layout-center-nav">
+                   <div class="top">
+                       <div class="top1">
+                           <input type="text" placeholder="请输入手机号码" id="username">
+                       </div>
+                       <div class="top2">
+                            <input type="password" placeholder="请输入密码" id="password">
+                        </div>
+                   </div>
+                   <span id="err"></span>
+                   <div class="center">
+                       <div class="dengru" id="btn">登入</div>
+                   </div>
+                   <div class="bottom">
+                       <div class="bottom-left">手机短信登录/注册</div>
+                       <div class="bottom-right"><i>立即注册</i><i>忘记密码？</i></div>
+                   </div>
+               </div>
+           </div>
+           <div class="layout-bottom">
+               <div class="layout-bottom-nav"></div>
+               <fieldset>
+                   <legend align='center'>其他登入方式</legend>
+               </fieldset>
+               <div class="content">
+                    <ul>
+                        <li class="iconfont">&#xe73e;</li>
+                        <li class="iconfont">&#xe65e;</li>
+                        <li class="iconfont">&#xe60a;</li>
+                        <li class="iconfont">&#xe73b;</li>
+                    </ul>
+               </div>
+           </div>
+       </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-main">
+            <ul>
+                <li class="ulli"><a href="">简体</a></li>
+                <li><a href="">繁体</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">隐私政策</a></li>
+            </ul>
+        </div>
+        <div class="intro">小米公司版权所有-京ICP备10046444京公网安备10123579023-京ICP证110507号</div>
+    </div>
+</body>
+<script>
+    $("#btn").click(function () { 
+        var username = $('#username').val();
+        var password = $('#password').val();
+        var err = $("#err");
+        $.ajax({
+            'type':'get',
+            'url':'php/checkuser.php',
+            'data':{'username':username,'password':password},
+            'dataType':'json',
+            'success':function(res){
+                console.log(res);
+                if (res.code == 200) {
+                    err.css("color",'green').html(res.message); 
+                }else{
+                    err.css("color",'red').html(res.message); 
+                }
+            }
+        })
+     })
+</script>
+</html>

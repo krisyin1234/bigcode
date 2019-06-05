@@ -1,0 +1,109 @@
+.warper{
+    height: 550px;
+    background-color: #f9f9f9;
+}
+.warp{
+    width: 855px;
+    height: 550px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+.layout{
+    height: 550px;
+    width: 785px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.logo img{
+    margin-left: 365px;
+    margin-bottom: 40px;
+}
+.biaoti{
+    text-align: center;
+    font-size: 30px;
+}
+.reg{
+    width: 332px;
+    height: 306px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 20px;
+}
+.bottom-p{
+    padding-top: 10px;
+}
+/* .top-p{
+    padding-top: 10px;
+} */
+.top1{
+    border: 1px solid #ccc;
+    width: 332px;
+    height: 48px;
+    
+    /* padding: 13px 16px 13px 14px; */
+}
+.top1 input{
+    margin: 13px 14px 13px 14px;
+    width: 315px;
+    border: none;
+    outline: none;
+}
+.top2{
+    border: 1px solid #ccc;
+    width: 332px;
+    height: 48px;
+    /* padding: 13px 16px 13px 14px; */
+}
+.top2 input{
+    margin: 13px 14px 13px 14px;
+    width: 315px;
+    border: none;
+    outline: none;
+}
+.center{
+    margin-top: 30px;
+}
+.zhuce{
+    width: 100%;
+    text-align: center;
+    background-color: #ff6700;
+    line-height: 50px;
+    color: #fff5d6;
+}
+.bianhao{
+    text-align: center;
+    margin-top: 50px;
+}
+.footer{
+    height: 150px;
+    background-color: #f9f9f9; 
+}
+.footer-main {
+    padding-top: 40px;
+    width: 800px;
+    height: 50px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+}
+.footer-main ul{
+    margin-left:250px ;
+    padding-top: 20px;
+}
+.footer-main ul li{
+    float: left;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left:1px solid #757575; 
+    text-align: center;
+    color: #757575;
+}
+.intro{
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: #757575;
+}
+.footer-main ul .ulli{
+    border-left: none;
+}
